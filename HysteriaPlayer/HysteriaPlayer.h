@@ -194,6 +194,7 @@ typedef NS_ENUM(NSInteger, HysteriaPlayerShuffleMode) {
 - (NSNumber *)getHysteriaIndex:(AVPlayerItem *)item;
 
 - (void)deprecatePlayer;
+- (AVQueuePlayer *) audioPlayer;
 
 @end
 

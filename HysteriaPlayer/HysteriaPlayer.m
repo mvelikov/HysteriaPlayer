@@ -586,6 +586,10 @@ static dispatch_once_t onceToken;
     [self.audioPlayer removeTimeObserver:observer];
 }
 
+- (AVQueuePlayer *) audioPlayer {
+    return _audioPlayer;
+}
+
 #pragma mark -
 #pragma mark ===========  Interruption, Route changed  =========
 #pragma mark -
