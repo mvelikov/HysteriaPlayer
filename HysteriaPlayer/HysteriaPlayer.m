@@ -454,6 +454,9 @@ static dispatch_once_t onceToken;
 - (void)playPrevious
 {
     NSInteger nowIndex = [[self getHysteriaIndex:self.audioPlayer.currentItem] integerValue];
+    if (nowIndex == 0 && self.lastItemIndex) {
+        nowIndex = self.lastItemIndex;
+    }
     if (nowIndex == 0)
     {
         if (_repeatMode == HysteriaPlayerRepeatModeOn) {
